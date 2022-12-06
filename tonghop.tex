@@ -1,0 +1,579 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{draftwatermark}
+\usepackage{pgf, tikz}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\large{Nguyễn Xuân Bách}}
+\chead{}
+\rhead{\large{THPT chuyên Hà Nội - Amsterdam}}
+\lfoot{}
+\cfoot{}
+\rfoot{\large{\thepage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\SetWatermarkLightness{ 0.9 }
+\SetWatermarkText{Nguyễn Xuân Bách}
+\SetWatermarkScale{ 0.5 }
+\theoremstyle{definition}
+\newtheorem{theorem}{Định lí}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Lưu ý}
+\let\stdsection\section
+\renewcommand\section{\newpage\stdsection}
+\begin{document}
+\section{Hình học}
+\textbf{Các chú ý}
+\subsection{Các chú ý}
+\begin{enumerate}
+  \item Luôn chú ý các Bổ đề, đưa về mô hình quen thuộc
+  \item Với chứng minh Đồng quy, có thể sử dụng Ceva, Ceva sin, Ceva dạng đường cao, Trục đẳng phương, Hàng điểm, Jacobi
+  \item Sử dụng hình học xạ ảnh: Desargues, Pappus, Pascal
+  \item Có thể lấy thêm điểm, điểm thuộc trung trực, hoặc tâm đường tròn ngoại tiếp để đưa về Desargues
+  \item Để chứng minh tiếp xúc có thể dùng tính toán
+  \item Điểm tiếp xúc thường sẽ thuộc nhiều đường tròn, là điểm Miquel của tứ giác toàn phần nào đó
+\end{enumerate}
+\begin{center}
+  \definecolor{qqccqq}{rgb}{0.,0.8,0.}
+  \definecolor{qqqqff}{rgb}{0.,0.,1.}
+  \definecolor{ffqqqq}{rgb}{1.,0.,0.}
+  \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+  \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+  \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+  \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+  \begin{tikzpicture}[x=5.0cm,y=5.0cm]
+  \clip(-1.8835285073161878,-1.1961690059909131) rectangle (1.2853891246050657,1.1192678363644675);
+  \fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-0.6,0.8) -- (-0.8,-0.6) -- (0.8,-0.6) -- cycle;
+  \draw [line width=2.pt] (0.,0.) circle (5.cm);
+  \draw [line width=2.pt,color=zzttqq] (-0.6,0.8)-- (-0.8,-0.6);
+  \draw [line width=2.pt,color=zzttqq] (-0.8,-0.6)-- (0.8,-0.6);
+  \draw [line width=2.pt,color=zzttqq] (0.8,-0.6)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.20355339059327363,-0.3893398282201789) circle (2.8033008588991053cm);
+  \draw [line width=2.pt,color=ffqqqq] (-0.6,0.8)-- (-0.46331649788705515,-0.8861928812542303);
+  \draw [line width=2.pt] (-0.8,-0.6)-- (-0.46331649788705515,-0.8861928812542303);
+  \draw [line width=2.pt] (-0.46331649788705515,-0.8861928812542303)-- (0.8,-0.6);
+  \draw [line width=2.pt] (-0.7585786437626904,-0.3100505063388336)-- (0.19289321881345275,0.007106781186547478);
+  \draw [line width=2.pt] (-0.6,0.8)-- (0.6,0.8);
+  \draw [line width=2.pt,color=ffqqqq] (-0.6,0.8)-- (0.28284271247461884,-0.6);
+  \draw [line width=2.pt] (-0.46862915010152395,-0.07451660040609583) circle (2.627416997969521cm);
+  \draw [line width=2.pt] (0.1061636786439457,0.18591159167098106) circle (3.9295579583549074cm);
+  \draw [line width=2.pt] (-1.6284271247461903,-0.6)-- (0.8,-0.6);
+  \draw [line width=2.pt] (0.,-1.)-- (-1.6284271247461903,-0.6);
+  \draw [line width=2.pt,color=qqqqff] (-1.6284271247461903,-0.6)-- (0.19289321881345275,0.007106781186547478);
+  \draw [line width=2.pt,color=qqqqff] (-1.6284271247461903,-0.6)-- (0.4958870938999633,0.8683870047988103);
+  \draw [line width=2.pt] (0.,1.)-- (0.,-1.);
+  \draw [line width=2.pt] (0.,-1.)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.6,0.8)-- (0.,1.);
+  \draw [line width=2.pt] (-0.28284271247461884,-0.151471862576143) circle (2.2426406871192843cm);
+  \draw [line width=2.pt] (-0.9899494936611666,0.14142135623730967)-- (-0.46331649788705515,-0.8861928812542303);
+  \draw [line width=2.pt] (0.,-1.)-- (-0.46331649788705515,-0.8861928812542303);
+  \draw [line width=2.pt,color=ffqqqq] (-0.46331649788705515,-0.8861928812542303)-- (0.6,0.8);
+  \draw [line width=2.pt] (-0.46331649788705515,-0.8861928812542303)-- (0.7071067811865476,0.7071067811865475);
+  \draw [line width=2.pt,color=qqqqff] (-1.6284271247461903,-0.6)-- (0.1061636786439457,0.18591159167098106);
+  \draw [line width=2.pt] (-0.9875927411189971,-0.15703686729257482)-- (0.,-1.);
+  \draw [line width=2.pt] (0.,-1.)-- (0.4958870938999633,0.8683870047988103);
+  \draw [line width=2.pt] (-0.28284271247461884,-0.151471862576143)-- (-0.28284271247461873,-0.6);
+  \draw [line width=2.pt,color=qqccqq,domain=-1.8835285073161878:1.2853891246050657] plot(\x,{(-0.28284271247461884-0.6242640687119285*\x)/0.2828427124746189});
+  \draw [line width=2.pt] (-0.9899494936611666,0.14142135623730967)-- (0.8,-0.6);
+  \draw [line width=2.pt] (-0.8,-0.6)-- (0.7071067811865476,0.7071067811865475);
+  \begin{scriptsize}
+  \draw [fill=ududff] (0.,0.) circle (2.5pt);
+  \draw[color=ududff] (-0.041948507117260524,0.04635902045909629) node {$O$};
+  \draw [fill=xdxdff] (-0.6,0.8) circle (2.5pt);
+  \draw[color=xdxdff] (-0.6665779808689435,0.8244534942273579) node {$A$};
+  \draw [fill=ududff] (-0.8,-0.6) circle (2.5pt);
+  \draw[color=ududff] (-0.8415819282562684,-0.6132712427700528) node {$B$};
+  \draw [fill=xdxdff] (0.8,-0.6) circle (2.5pt);
+  \draw[color=xdxdff] (0.8169170192913036,-0.637502558562144) node {$C$};
+  \draw [fill=uuuuuu] (-0.28284271247461884,-0.151471862576143) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.3246471913583239,-0.11518308482151167) node {$I$};
+  \draw [fill=uuuuuu] (0.,-1.) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.03925613869591706,-1.0359730849209772) node {$N$};
+  \draw [fill=uuuuuu] (0.,1.) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.03117903343188668,1.0479200731988656) node {$M$};
+  \draw [fill=uuuuuu] (-0.46331649788705515,-0.8861928812542303) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.5211900861163966,-0.9013546638538037) node {$X$};
+  \draw [fill=uuuuuu] (-0.20355339059327363,-0.3893398282201789) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.1819516650271205,-0.32249545326495854) node {$J$};
+  \draw [fill=uuuuuu] (-0.7585786437626904,-0.3100505063388336) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.8092735072001469,-0.2713404532594327) node {$Y$};
+  \draw [fill=uuuuuu] (0.19289321881345275,0.007106781186547478) circle (2.0pt);
+  \draw[color=uuuuuu] (0.1922875455396206,0.08405217835790481) node {$Z$};
+  \draw [fill=uuuuuu] (-0.28284271247461873,-0.6) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.24118377029667665,-0.6482720322475178) node {$D$};
+  \draw [fill=uuuuuu] (0.6,0.8) circle (2.0pt);
+  \draw[color=uuuuuu] (0.6472978087466655,0.8217611258060145) node {$L$};
+  \draw [fill=uuuuuu] (-1.6284271247461903,-0.6) circle (2.0pt);
+  \draw[color=uuuuuu] (-1.622368770445872,-0.5405772953937793) node {$T$};
+  \draw [fill=uuuuuu] (0.28284271247461884,-0.6) circle (2.0pt);
+  \draw[color=uuuuuu] (0.23805780870245943,-0.6294254532981136) node {$K$};
+  \draw [fill=uuuuuu] (-0.9899494936611666,0.14142135623730967) circle (2.0pt);
+  \draw[color=uuuuuu] (-1.0462019282783714,0.14328428362746107) node {$E$};
+  \draw [fill=uuuuuu] (0.7071067811865476,0.7071067811865475) circle (2.0pt);
+  \draw[color=uuuuuu] (0.7469154403363736,0.7275282310589931) node {$F$};
+  \draw [fill=uuuuuu] (-0.9875927411189971,-0.15703686729257482) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.9681232440594112,-0.11249071640016821) node {$P$};
+  \draw [fill=uuuuuu] (-0.46862915010152395,-0.07451660040609583) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.4713812703215426,0.007319678349616034) node {$O_C$};
+  \draw [fill=uuuuuu] (0.4958870938999633,0.8683870047988103) circle (2.0pt);
+  \draw[color=uuuuuu] (0.515371756100836,0.9133016521316923) node {$R$};
+  \draw [fill=uuuuuu] (0.1061636786439457,0.18591159167098106) circle (2.0pt);
+  \draw[color=uuuuuu] (0.09940083500327118,0.2711717836412757) node {$O_B$};
+  \draw [fill=uuuuuu] (-0.46862915010152384,-0.6) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.44714995452945144,-0.6361563743514722) node {$C_b$};
+  \draw [fill=uuuuuu] (0.10616367864394584,-0.6) circle (2.0pt);
+  \draw[color=uuuuuu] (0.1344016244807362,-0.6334640059301289) node {$B_C$};
+  \draw [fill=uuuuuu] (-0.2828427124746188,-0.3757359312880714) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.32195482293698047,-0.3628809795851105) node {$H$};
+  \end{scriptsize}
+  \end{tikzpicture}
+\end{center}
+\subsection{Các điểm đặc biệt trong tam giác}
+\begin{theorem}[Điểm Humpty]
+Tam giác $ABC$ có $P$ thỏa mãn $\angle PAB=\angle PBC, \angle PAC=\angle PCB$. Khi đó
+\begin{enumerate}
+  \item $P=(C_1)\cap (C_2)$ với $(C_1)$ đi qua $A$, tiếp xúc $BC$ tại $B$, $(C_2)$ đi qua $A$, tiếp xúc $BC$ tại $C$
+  \item $P=(BHC)\cap (AH)$
+  \item $P\in AM$, từ đó $MP.MA=MB^2$
+  \item $P$ thuộc $A-Apollonius \triangle ABC$
+  \item Đường đối trung $AD (D\in BC)$, $BP,CP\cap AC,AB=E,F$, $EF\cap AM=S$ thì $DS\perp BC//EF$
+\end{enumerate}
+\begin{center}
+  \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+  \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+  \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+  \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+  \begin{tikzpicture}[x=5.0cm,y=5.0cm]
+  \clip(-1.769348579531577,-2.073945785659917) rectangle (4.177631836664763,0.9595080446656142);
+  \fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-0.6,0.8) -- (-0.8,-0.6) -- (0.8,-0.6) -- cycle;
+  \draw [line width=2.pt] (0.,0.) circle (5.cm);
+  \draw [line width=2.pt,color=zzttqq] (-0.6,0.8)-- (-0.8,-0.6);
+  \draw [line width=2.pt,color=zzttqq] (-0.8,-0.6)-- (0.8,-0.6);
+  \draw [line width=2.pt,color=zzttqq] (0.8,-0.6)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.8,0.11428571428571441) circle (3.571428571428572cm);
+  \draw [line width=2.pt] (0.8,0.8) circle (7.cm);
+  \draw [line width=2.pt] (-0.6,0.8)-- (0.,-0.6);
+  \draw [line width=2.pt] (-0.6,-0.4)-- (-0.16551724137931018,-0.21379310344827557);
+  \draw [line width=2.pt] (-0.16551724137931018,-0.21379310344827557)-- (-0.8,-0.6);
+  \draw [line width=2.pt] (-0.16551724137931018,-0.21379310344827557)-- (0.8,-0.6);
+  \draw [line width=2.pt] (-0.8,-0.6)-- (0.6,-2.);
+  \draw [line width=2.pt] (0.6,-2.)-- (0.8,-0.6);
+  \draw [line width=2.pt] (-0.6,-0.4)-- (0.6,-2.);
+  \draw [line width=2.pt] (0.6,-2.)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.6,0.8)-- (-0.6,-0.4);
+  \draw [line width=2.pt] (-0.6,0.8)-- (0.408,-0.544);
+  \draw [line width=2.pt] (-0.8,-0.6)-- (-0.08571428571428569,0.1142857142857143);
+  \draw [line width=2.pt] (-0.6,-0.4)-- (0.8,-0.6);
+  \draw [line width=2.pt] (-0.16551724137931018,-0.21379310344827557)-- (-0.08571428571428569,0.1142857142857143);
+  \draw [line width=2.pt] (-0.16551724137931018,-0.21379310344827557)-- (0.408,-0.544);
+  \draw [line width=2.pt] (0.,-1.2) circle (5.cm);
+  \draw [line width=2.pt] (-0.6,0.8)-- (-0.25945945945945925,-0.6);
+  \draw [line width=2.pt] (-0.8,-0.6)-- (0.19459459459459455,0.005405405405405672);
+  \draw [line width=2.pt] (-0.7135135135135132,0.005405405405405838)-- (0.8,-0.6);
+  \draw [line width=2.pt] (-0.7135135135135132,0.005405405405405838)-- (0.19459459459459455,0.005405405405405672);
+  \draw [line width=2.pt] (-0.2594594594594595,0.005405405405405754)-- (-0.25945945945945925,-0.6);
+  \begin{scriptsize}
+  \draw [fill=ududff] (0.,0.) circle (2.5pt);
+  \draw[color=ududff] (0.02603281539365268,0.06534461909872799) node {$O$};
+  \draw [fill=xdxdff] (-0.6,0.8) circle (2.5pt);
+  \draw[color=xdxdff] (-0.6370943010030924,0.7531626387655636) node {$A$};
+  \draw [fill=xdxdff] (-0.8,-0.6) circle (2.5pt);
+  \draw[color=xdxdff] (-0.8663669742253712,-0.6189461286723802) node {$B$};
+  \draw [fill=xdxdff] (0.8,-0.6) circle (2.5pt);
+  \draw[color=xdxdff] (0.7949780886622186,-0.49901888421764984) node {$C$};
+  \draw [fill=uuuuuu] (-0.16551724137931018,-0.21379310344827557) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.11153078853971464,-0.17098259791500525) node {$P$};
+  \draw [fill=uuuuuu] (-0.6,-0.4) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.6547306604817292,-0.30854620184837234) node {$H$};
+  \draw [fill=uuuuuu] (0.,-0.6) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.023348991146530457,-0.636582488151017) node {$M$};
+  \draw [fill=xdxdff] (0.6,-2.) circle (2.5pt);
+  \draw[color=xdxdff] (0.653887212833124,-1.991054896110324) node {$A'$};
+  \draw [fill=uuuuuu] (-0.08571428571428569,0.1142857142857143) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.062148981999531505,0.17116277597054885) node {$K$};
+  \draw [fill=uuuuuu] (0.408,-0.544) circle (2.0pt);
+  \draw[color=uuuuuu] (0.43166908340229987,-0.48490979663474043) node {$L$};
+  \draw [fill=xdxdff] (-0.6,0.8) circle (2.5pt);
+  \draw [fill=uuuuuu] (-0.25945945945945925,-0.6) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.2773125676389009,-0.6612733914211085) node {$D$};
+  \draw [fill=uuuuuu] (0.19459459459459455,0.005405405405405672) circle (2.0pt);
+  \draw[color=uuuuuu] (0.22003276965865787,0.09003552236881954) node {$E$};
+  \draw [fill=uuuuuu] (-0.7135135135135132,0.005405405405405838) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.7640760892492776,-0.02283717829445605) node {$F$};
+  \draw [fill=uuuuuu] (-0.2594594594594595,0.005405405405405754) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.23498530489017247,0.06534461909872799) node {$S$};
+  \end{scriptsize}
+  \end{tikzpicture}
+\end{center}
+\end{theorem}
+\begin{proof}
+Dựng thêm $A'$ là đối xứng của $A$ qua trung điểm $BC$
+\end{proof}
+\begin{theorem}[Điểm Dumpty]
+Tma giác $ABC$ điểm $Q$ thỏa mãn $\angle QAB=\angle QCA,\angle QAC=\angle QBA$. Khi đó
+\begin{enumerate}
+  \item $Q=(C_1)\cap(C_2)$ với $(C_1)$ đi qua $A,C$ tiếp xúc $AB$ tại $A$, $(C_2)$ đi qua $A,B$ tiếp xúc $AC$ tại $C$
+  \item $AQ$ là đường đối trung
+  \item $Q=(BOC)\cap(AO)$, $Q$ là trung điểm $AQ_A$ với $Q_A$ là giao của $AQ$ với $(O)$
+  \item $\dfrac{QB}{QC}=\dfrac{AB^2}{AC^2}$
+\end{enumerate}
+\begin{center}
+  \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+  \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+  \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+  \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+  \begin{tikzpicture}[x=4.0cm,y=4.0cm]
+  \clip(-2.1394080616639157,-1.885485396016479) rectangle (3.858266310850018,1.2620244923402852);
+  \fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-0.6,0.8) -- (-0.8,-0.6) -- (0.8,-0.6) -- cycle;
+  \draw [line width=2.pt] (0.,0.) circle (4.cm);
+  \draw [line width=2.pt,color=zzttqq] (-0.6,0.8)-- (-0.8,-0.6);
+  \draw [line width=2.pt,color=zzttqq] (-0.8,-0.6)-- (0.8,-0.6);
+  \draw [line width=2.pt,color=zzttqq] (0.8,-0.6)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-1.225,0.175) circle (3.5355339059327386cm);
+  \draw [line width=2.pt] (0.625,0.625) circle (4.949747468305833cm);
+  \draw [line width=2.pt] (-0.8,-0.6)-- (0.,0.);
+  \draw [line width=2.pt] (0.,0.)-- (0.8,-0.6);
+  \draw [line width=2.pt] (-0.6,0.8)-- (-0.3827586206896551,-0.09310344827586221);
+  \draw [line width=2.pt] (-0.3827586206896551,-0.09310344827586221)-- (0.,0.);
+  \draw [line width=2.pt] (-0.6,0.8)-- (0.,-1.6666666666666667);
+  \draw [line width=2.pt] (-1.85,0.8)-- (1.85,0.8);
+  \draw [line width=2.pt] (-1.85,0.8)-- (0.,-1.6666666666666667);
+  \draw [line width=2.pt] (0.,-1.6666666666666667)-- (1.85,0.8);
+  \draw [line width=2.pt] (-0.8,-0.6)-- (-0.3827586206896551,-0.09310344827586221);
+  \draw [line width=2.pt] (-0.3827586206896551,-0.09310344827586221)-- (0.8,-0.6);
+  \begin{scriptsize}
+  \draw [fill=ududff] (0.,0.) circle (2.5pt);
+  \draw[color=ududff] (0.025411527447824496,0.06720363034310346) node {$O$};
+  \draw [fill=xdxdff] (-0.6,0.8) circle (2.5pt);
+  \draw[color=xdxdff] (-0.5729054444172293,0.8685857562956898) node {$A$};
+  \draw [fill=xdxdff] (-0.8,-0.6) circle (2.5pt);
+  \draw[color=xdxdff] (-0.8521200312875878,-0.676159880155902) node {$B$};
+  \draw [fill=xdxdff] (0.8,-0.6) circle (2.5pt);
+  \draw[color=xdxdff] (0.8449244707296558,-0.6652813897583556) node {$C$};
+  \draw [fill=uuuuuu] (-1.225,0.175) circle (2.0pt);
+  \draw[color=uuuuuu] (-1.2655026663943523,0.25576413056724145) node {$K$};
+  \draw [fill=uuuuuu] (0.625,0.625) circle (2.0pt);
+  \draw[color=uuuuuu] (0.6962517686298546,0.56398802516439) node {$L$};
+  \draw [fill=uuuuuu] (-0.3827586206896551,-0.09310344827586221) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.5003821751002532,-0.09959988908594167) node {$Q$};
+  \draw [fill=uuuuuu] (0.,-1.6666666666666667) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.014476270676512429,-1.7567565929788465) node {$P$};
+  \draw [fill=uuuuuu] (-1.85,0.8) circle (2.0pt);
+  \draw[color=uuuuuu] (-1.925464417178836,0.8359502851030505) node {$E$};
+  \draw [fill=uuuuuu] (1.85,0.8) circle (2.0pt);
+  \draw[color=uuuuuu] (1.9291473470184506,0.80694097737626) node {$F$};
+  \draw [fill=uuuuuu] (-0.16551724137931023,-0.9862068965517241) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.1323265833165988,-0.9172997506348477) node {$Q_A$};
+  \end{scriptsize}
+  \end{tikzpicture}
+\end{center}
+\end{theorem}
+\begin{proof}
+Dựng $P$ là giao của hai tiếp tuyến tại $B$ và $C$ của $(O)$, dựng $E,F$ là giao điểm của đường thẳng qua $A$ song song $BC$ cắt $PB,PC$\\
+Chú ý rằng ta có $E\in (C_1)$, $F\in (C_2)$
+\end{proof}
+\begin{theorem}[Điểm Lemoine]
+Tam giác $ABC$, điểm $L$ là điểm Lemoine của tam giác, là điểm liên hợp đẳng giác với trọng tâm $G$. Khi đó
+\begin{enumerate}
+  \item Đường tròn Lemoine thứ nhất: đường thẳng qua $L$ song song với $AB,BC,CA$ cắt lại các cạnh tạo thành 6 điểm đồng viên: $L_1,\cdots,L_6$
+  \item Đường tròn Lemoine thứ hai: các đường đối song qua $L$ cắt các cạnh tam giác tương ứng tạo thành 6 điểm đồng viên: $L'_1,\cdots,L'_6$
+  \item $T,L,M$ thẳng hàng với $T$ là trung điểm $AH$, $M$ là trung điểm $BC$
+  \item $H,L,K$ thẳng hàng với $K=AM\cap EF$
+\end{enumerate}
+\begin{center}
+  \definecolor{qqzzff}{rgb}{0.,0.6,1.}
+  \definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+  \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+  \definecolor{qqqqff}{rgb}{0.,0.,1.}
+  \definecolor{qqffqq}{rgb}{0.,1.,0.}
+  \definecolor{ffqqqq}{rgb}{1.,0.,0.}
+  \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+  \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+  \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+  \begin{tikzpicture}[  x=5.0cm,y=5.0cm]
+  \clip(-1.4772668178835562,-1.0529293231228682) rectangle (2.5216899485530173,1.045676767123169);
+  \fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-0.6,0.8) -- (-0.8,-0.6) -- (0.7984623493263657,-0.602044746433536) -- cycle;
+  \draw [line width=2.pt] (0.,0.) circle (5.cm);
+  \draw [line width=2.pt,color=ffqqqq] (-0.6,0.8)-- (-0.8,-0.6);
+  \draw [line width=2.pt,color=qqffqq] (-0.8,-0.6)-- (0.7984623493263657,-0.602044746433536);
+  \draw [line width=2.pt,color=qqqqff] (0.7984623493263657,-0.602044746433536)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.6,0.8)-- (-0.601791198553585,-0.600253547879951);
+  \draw [line width=2.pt,dash pattern=on 1pt off 1pt,color=xfqqff] (-0.6008955992767924,0.09987322606002458)-- (-7.688253368171583E-4,-0.601022373216768);
+  \draw [line width=2.pt] (-7.688253368171583E-4,-0.601022373216768)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.7683170175141676,-0.3782191225991739)-- (2.5354787995103886E-4,0.19820880144641487);
+  \draw [line width=2.pt] (-0.259336122488593,0.00351654867000695)-- (-0.601791198553585,-0.600253547879951);
+  \draw [line width=2.pt,color=qqzzff] (-0.18128139836453994,-0.08923932422429125) circle (2.8272091621995217cm);
+  \draw [line width=2.pt,color=ffqqqq] (-0.42284905408383855,-0.6004824499318935)-- (-0.2700382726569381,0.4691930200564089);
+  \draw [line width=2.pt,color=qqffqq] (-0.7397137426452415,-0.177996198516691)-- (0.37692204386421896,-0.1794245944016401);
+  \draw [line width=2.pt,color=qqqqff] (0.05897750873306678,-0.6010988004804805)-- (-0.6925245240721418,0.15232833149500682);
+  \draw [line width=2.pt] (-0.6,0.8)-- (0.,0.);
+  \draw [line width=2.pt] (0.,0.)-- (-0.8,-0.6);
+  \draw [line width=2.pt] (0.,0.)-- (0.7984623493263657,-0.602044746433536);
+  \draw [line width=2.pt,color=qqzzff] (-0.36256279672908,-0.17847864844858385) circle (2.6405390713450183cm);
+  \draw [line width=2.pt] (-0.6794274852904826,0.24400760296661883)-- (-0.045698108167678136,-0.600964899863787);
+  \draw [line width=2.pt] (-0.6805073318602309,-0.6001528545274247)-- (-0.04461826159792856,0.24319555763025655);
+  \draw [line width=2.pt] (0.059923454686123284,0.1383860401128179)-- (-0.7850490481442828,-0.49534333700998645);
+  \draw [line width=2.pt] (-0.6794274852904826,0.24400760296661883)-- (-0.6805073318602309,-0.6001528545274247);
+  \draw [line width=2.pt] (-0.6794274852904826,0.24400760296661883)-- (-0.04461826159792856,0.24319555763025655);
+  \draw [line width=2.pt] (-0.04461826159792856,0.24319555763025655)-- (-0.045698108167678136,-0.600964899863787);
+  \draw [line width=2.pt] (-0.045698108167678136,-0.600964899863787)-- (-0.6794274852904826,0.24400760296661883);
+  \draw [line width=2.pt] (-0.6008955992767924,0.09987322606002458)-- (-0.8,-0.6);
+  \draw [line width=2.pt] (-0.6008955992767924,0.09987322606002458)-- (0.7984623493263657,-0.602044746433536);
+  \begin{scriptsize}
+  \draw [fill=ududff] (0.,0.) circle (2.5pt);
+  \draw[color=ududff] (0.016902034388392044,0.043519826562129306) node {$O$};
+  \draw [fill=xdxdff] (-0.6,0.8) circle (2.5pt);
+  \draw[color=xdxdff] (-0.6649031700463804,0.8341237338322378) node {$A$};
+  \draw [fill=xdxdff] (-0.8,-0.6) circle (2.5pt);
+  \draw[color=xdxdff] (-0.7833728686893019,-0.5560819135081672) node {$B$};
+  \draw [fill=xdxdff] (0.7984623493263657,-0.602044746433536) circle (2.5pt);
+  \draw[color=xdxdff] (0.8147591885141896,-0.5584996624600634) node {$C$};
+  \draw [fill=uuuuuu] (-0.601791198553585,-0.600253547879951) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.5875352035856971,-0.6286143820650578) node {$H$};
+  \draw [fill=uuuuuu] (-0.6008955992767924,0.09987322606002458) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.6383079315755206,0.13297653778229448) node {$T$};
+  \draw [fill=uuuuuu] (-7.688253368171583E-4,-0.601022373216768) circle (2.0pt);
+  \draw[color=uuuuuu] (0.0023955406770139066,-0.6455386247283323) node {$M$};
+  \draw [fill=xdxdff] (-0.6,0.8) circle (2.5pt);
+  \draw [fill=uuuuuu] (-0.36256279672908004,-0.17847864844858446) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.34817805734795776,-0.23210355395405532) node {$L$};
+  \draw [fill=uuuuuu] (-0.7683170175141676,-0.3782191225991739) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.7930438644968874,-0.3263957630780132) node {$F$};
+  \draw [fill=uuuuuu] (2.5354787995103886E-4,0.19820880144641487) circle (2.0pt);
+  \draw[color=uuuuuu] (0.016902034388392044,0.2369397427138378) node {$E$};
+  \draw [fill=uuuuuu] (-0.259336122488593,0.00351654867000695) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.2514680992721035,0.06769731608109286) node {$K$};
+  \draw [fill=uuuuuu] (-0.42284905408383855,-0.6004824499318935) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.39532416190993674,-0.6515829971080732) node {$L_1$};
+  \draw [fill=uuuuuu] (0.05897750873306678,-0.6010988004804805) circle (2.0pt);
+  \draw[color=uuuuuu] (0.08339013056554184,-0.6443297502523841) node {$L_2$};
+  \draw [fill=uuuuuu] (0.37692204386421896,-0.1794245944016401) circle (2.0pt);
+  \draw[color=uuuuuu] (0.4291282306867208,-0.13418472140225288) node {$L_3$};
+  \draw [fill=uuuuuu] (-0.2700382726569381,0.4691930200564089) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.22124623737339905,0.5282784914173487) node {$L_4$};
+  \draw [fill=uuuuuu] (-0.6925245240721418,0.15232833149500682) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.770075249453872,0.15352740387341351) node {$L_5$};
+  \draw [fill=uuuuuu] (-0.7397137426452415,-0.177996198516691) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.7966704879247319,-0.10275398502760025) node {$L_6$};
+  \draw [fill=uuuuuu] (-0.6805073318602309,-0.6001528545274247) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.6636942955704324,-0.6540007460599696) node {$L'_1$};
+  \draw [fill=uuuuuu] (-0.04461826159792856,0.24319555763025655) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.00606658065462334,0.30826333679478035) node {$L'_4$};
+  \draw [fill=uuuuuu] (-0.045698108167678136,-0.600964899863787) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.16080251357599015,-0.5911392733106643) node {$L'_2$};
+  \draw [fill=uuuuuu] (0.059923454686123284,0.1383860401128179) circle (2.0pt);
+  \draw[color=uuuuuu] (0.12690961169967627,0.15594515282530988) node {$L'_3$};
+  \draw [fill=uuuuuu] (-0.6794274852904826,0.24400760296661883) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.7386445130792193,0.27199710251633497) node {$L'_5$};
+  \draw [fill=uuuuuu] (-0.7850490481442828,-0.49534333700998645) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.8498609648664518,-0.45574533200446826) node {$L'_6$};
+  \draw [fill=uuuuuu] (-0.6799674085753566,-0.17807262578040337) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.6528144252868987,-0.2055083154831954) node {$N$};
+  \draw [fill=uuuuuu] (-0.045158184882803355,-0.1788846711167656) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.021781948841949658,-0.22001480919457353) node {$P$};
+  \end{scriptsize}
+  \end{tikzpicture}
+\end{center}
+\end{theorem}
+\begin{proof}
+Chủ yếu cộng góc, dùng bổ đề hình thang.
+\end{proof}
+\begin{theorem}[Mô hình trục tâm]
+Tam giác $ABC$
+\begin{center}
+  \definecolor{qqzzff}{rgb}{0.,0.6,1.}
+  \definecolor{ffqqqq}{rgb}{1.,0.,0.}
+  \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+  \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+  \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+  \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+  \begin{tikzpicture}[x=4.0cm,y=4.0cm]
+  \clip(-2.883167806134509,-2.6077284145684474) rectangle (4.07453621128708,1.0435938871981345);
+  \fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (-0.6,0.8) -- (-0.9165696609250371,-0.39987505132448886) -- (0.9079079906479349,-0.4191695128675621) -- cycle;
+  \draw [line width=2.pt] (0.,0.) circle (4.cm);
+  \draw [line width=2.pt,color=zzttqq] (-0.6,0.8)-- (-0.9165696609250371,-0.39987505132448886);
+  \draw [line width=2.pt,color=zzttqq] (-0.9165696609250371,-0.39987505132448886)-- (0.9079079906479349,-0.4191695128675621);
+  \draw [line width=2.pt,color=zzttqq] (0.9079079906479349,-0.4191695128675621)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.9165696609250371,-0.39987505132448886)-- (0.,0.);
+  \draw [line width=2.pt] (0.,0.)-- (0.9079079906479349,-0.4191695128675621);
+  \draw [line width=2.pt] (-0.802593606793827,0.032121569579850254)-- (-0.20479535668391416,0.4804702571622847);
+  \draw [line width=2.pt,color=ffqqqq] (-0.6,0.8)-- (-0.5036944817388705,0.2562959133710675);
+  \draw [line width=2.pt,color=ffqqqq] (-0.7030369116336354,0.10678909094999389)-- (-0.612723061590168,-0.40308833076411693);
+  \draw [line width=2.pt] (-0.5976172368455193,-0.13747536622602738) circle (1.064168654843233cm);
+  \draw [line width=2.pt] (-0.18535492419664257,-0.06445193922670377) circle (2.1810754431066943cm);
+  \draw [line width=2.pt] (-0.20479535668391416,0.4804702571622847)-- (-1.372165003773325,-0.3950569781547732);
+  \draw [line width=2.pt] (-1.372165003773325,-0.3950569781547732)-- (0.9079079906479349,-0.4191695128675621);
+  \draw [line width=2.pt] (-0.9165696609250371,-0.39987505132448886)-- (-0.025820699929483847,-2.4415965101771624);
+  \draw [line width=2.pt] (-0.025820699929483847,-2.4415965101771624)-- (0.9079079906479349,-0.4191695128675621);
+  \draw [line width=2.pt] (0.,0.)-- (-0.025820699929483847,-2.4415965101771624);
+  \draw [line width=2.pt] (-0.612723061590168,-0.40308833076411693)-- (-0.20479535668391416,0.4804702571622847);
+  \draw [line width=2.pt] (-0.802593606793827,0.032121569579850254)-- (-0.612723061590168,-0.40308833076411693);
+  \draw [line width=2.pt] (-0.9165696609250371,-0.39987505132448886)-- (-0.20479535668391416,0.4804702571622847);
+  \draw [line width=2.pt] (-0.6,0.8)-- (-0.612723061590168,-0.40308833076411693);
+  \draw [line width=2.pt] (-0.802593606793827,0.032121569579850254)-- (0.9079079906479349,-0.4191695128675621);
+  \draw [line width=2.pt,color=qqzzff] (-0.7494900685396748,0.0719492232704644)-- (-0.025820699929483847,-2.4415965101771624);
+  \draw [line width=2.pt,color=qqzzff] (-0.7494900685396748,0.0719492232704644)-- (-0.004330835138551092,-0.4095222820960255);
+  \draw [line width=2.pt] (-1.372165003773325,-0.3950569781547732)-- (-0.6,0.8);
+  \draw [line width=2.pt] (-0.6,0.8)-- (0.6,-0.8);
+  \draw [line width=2.pt] (-0.9758957418253286,0.21823725870527153)-- (0.6,-0.8);
+  \draw [line width=2.pt] (-1.372165003773325,-0.3950569781547732)-- (0.38508550125524055,0.9228809006166506);
+  \draw [line width=2.pt] (-0.9758957418253286,0.21823725870527153)-- (-0.9937896049434519,-0.11127542903236831);
+  \draw [line width=2.pt] (-0.9758957418253286,0.21823725870527153)-- (0.38508550125524055,0.9228809006166506);
+  \begin{scriptsize}
+  \draw [fill=ududff] (0.,0.) circle (2.5pt);
+  \draw[color=ududff] (0.02779421324622855,0.07818090533703942) node {$O$};
+  \draw [fill=xdxdff] (-0.6,0.8) circle (2.5pt);
+  \draw[color=xdxdff] (-0.5695419236787206,0.8774334829126736) node {$A$};
+  \draw [fill=xdxdff] (-0.9165696609250371,-0.39987505132448886) circle (2.5pt);
+  \draw[color=xdxdff] (-0.9607550274394266,-0.5275684166150202) node {$B$};
+  \draw [fill=xdxdff] (0.9079079906479349,-0.4191695128675621) circle (2.5pt);
+  \draw[color=xdxdff] (0.932211603660764,-0.48550249147946056) node {$C$};
+  \draw [fill=uuuuuu] (-0.612723061590168,-0.40308833076411693) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.6999462915989559,-0.48550249147946056) node {$D$};
+  \draw [fill=uuuuuu] (-0.20479535668391416,0.4804702571622847) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.1909485974586824,0.553525859368864) node {$E$};
+  \draw [fill=uuuuuu] (-0.802593606793827,0.032121569579850254) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.880829769681863,0.11604023795904314) node {$F$};
+  \draw [fill=uuuuuu] (-0.6086616702771019,-0.019044564192050667) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.5779551087058326,-0.11952894280009117) node {$H$};
+  \draw [fill=uuuuuu] (-0.004330835138551092,-0.4095222820960255) circle (2.0pt);
+  \draw[color=uuuuuu] (0.023587620732672572,-0.3382717535050016) node {$M$};
+  \draw [fill=uuuuuu] (-0.025820699929483847,-2.4415965101771624) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.14467607980956662,-2.4079152701745388) node {$S$};
+  \draw [fill=uuuuuu] (-1.372165003773325,-0.3950569781547732) circle (2.0pt);
+  \draw[color=uuuuuu] (-1.4360999814712523,-0.3130321984236658) node {$T$};
+  \draw [fill=uuuuuu] (-0.7494900685396748,0.0719492232704644) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.8345572520327472,0.18334571817593864) node {$G$};
+  \draw [fill=uuuuuu] (-0.7030369116336354,0.10678909094999389) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.7041528841125119,0.2296182358250543) node {$K$};
+  \draw [fill=uuuuuu] (-0.5036944817388705,0.2562959133710675) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.472790295866933,0.3263698636368416) node {$N$};
+  \draw [fill=uuuuuu] (-0.859581633859432,-0.18387674087231956) circle (2.0pt);
+  \draw[color=uuuuuu] (-0.9502385461555367,-0.13425201659753705) node {$M_B$};
+  \draw [fill=uuuuuu] (0.3515563169820106,0.03065037214736116) circle (2.0pt);
+  \draw[color=uuuuuu] (0.39166446566882074,0.10973034918870919) node {$M_C$};
+  \draw [fill=uuuuuu] (0.6,-0.8) circle (2.0pt);
+  \draw[color=uuuuuu] (0.6040973876033977,-0.8977485578079456) node {$A'$};
+  \draw [fill=uuuuuu] (-0.9758957418253286,0.21823725870527153) circle (2.0pt);
+  \draw[color=uuuuuu] (-1.074333025305438,0.28851053101483787) node {$R$};
+  \draw [fill=uuuuuu] (-0.9937896049434519,-0.11127542903236831) circle (2.0pt);
+  \draw[color=uuuuuu] (-1.074333025305438,-0.05643005509675161) node {$P$};
+  \draw [fill=uuuuuu] (0.38508550125524055,0.9228809006166506) circle (2.0pt);
+  \draw[color=uuuuuu] (0.4021809469527107,0.8437807428042259) node {$Q$};
+  \end{scriptsize}
+  \end{tikzpicture}
+\end{center}
+\end{theorem}
+\begin{theorem}[Bài toán đặc biệt]
+Tam giác $ABC$ lấy trên tia $BA,CA$ các điểm $F,E$: $CE=BF=BC$. Khi đó $EF\perp OI$
+\end{theorem}
+\begin{proof}
+Sử dụng định lí 4 điểm
+\end{proof}
+\subsection{Các Bổ đề}
+\begin{theorem}[Simson - đẳng giác]
+Với $AX,AY$ đẳng giác trong $\angle A: \triangle ABC$ thì $X-Simson\perp AY$
+\end{theorem}
+\begin{theorem}[Định lí 4 điểm]
+Khi sử dụng định lí 4 điểm để ý $AX^2-BX^2=P_{A/(X)}-P_{B/(X)}$
+\end{theorem}
+\begin{theorem}[Bổ đề đẳng giác]
+  Tam giác $ABC$ có $AP,AQ$ đẳng giác trong góc $A$, gọi $R=BP\cap CQ, S=BQ\cap CP$. Khi đó
+  $AR,AS$ đẳng giác trong $\angle A$.
+\end{theorem}
+\begin{theorem}[Tính chất liên hợp đẳng giác]
+$P,Q$ liên hợp đẳng giác trong tam giác $ABC$, $X=AP\cap (BCP),Y=AQ\cap (BQC)$, $J,K$ là tâm $(BPC),(BQC)$. Khi đó $XY//PQ$ và $AJ,AK$ đẳng giác trong $\angle A$
+\end{theorem}
+\begin{theorem}[cyclocevian conjugate]
+Tam giác $ABC$ có $X,Y,Z$ trên $BC,CA,AB$, lấy $K,L,S$ là giao điểm còn lại của $(XYZ)$ với $BC,CA,AB$. Khi đó $AX,BY,CZ$ đồng quy khi và chỉ khi $AK,BL,CS$ đồng quy
+\end{theorem}
+\begin{theorem}[cực và đối cực]
+$MN$ là đường đối cực của $H$ đối với cực và đối cực với $(I)$
+\end{theorem}
+\begin{theorem}[Tính tỉ lệ]
+Với 2 đoạn $AX,A_1A'$
+\end{theorem}
+\begin{theorem}[Định lí Carnot]
+$d(O,AB)+d(O,BC)+d(O,CA)=R+r$ ở đây là khoảng cách có hướng
+\end{theorem}
+\begin{proof}
+Đặt $OD=x, OE=y, OF=z$, theo Ptolemy cho $AEFO$: $$OA.EF=AF.OE+AE.OF \implies aR=by+cz$$
+Tương tự thì
+$$bR=cx+az, cR=bx+ay$$
+kết hợp với $$2S=r(a+b+c)=ax+by+cz$$
+\end{proof}
+\begin{theorem}[E.R.I.Q]
+Cho 2 đường thẳng $d_1,d_2$ lấy $A_1,B_1,C_1\in d_1$ và $A_2,B_2,C_2\in d_2$ sao cho $\dfrac{\overline{A_1B_1}}{\overline{B_1C_1}}=\dfrac{\overline{A_2B_2}}{\overline{B_2C_2}}$
+và lấy trên $A_1A_2,B_1B_2,C_1C_2$ các điểm $A_3,B_3,C_3$ sao cho 
+$$\dfrac{\overline{A_3A_1}}{\overline{A_3A_2}}=\dfrac{\overline{B_3B_1}}{\overline{B_3B_2}}=\dfrac{\overline{C_3C_1}}{\overline{C_3C_2}}$$ thì $A_3,B_3,C_3$ thẳng hàng và $\dfrac{\overline{A_3B_3}}{\overline{B_3C_3}}=k$
+\end{theorem}
+\begin{theorem}[Tổng quát ERIQ]
+$\overline{A,B,C}$ và $\overline{A',B',C'}$ có $\triangle AXA'\sim + \triangle BYB'\sim + \triangle CZC'$ thì $X,Y,Z$ thẳng hàng
+\end{theorem}
+
+
+\section{Đa thức}
+\begin{remark}
+\begin{enumerate}
+  \item Trong những bài toán Đa thức, ta nên dự đoán hàm đa thức thỏa mãn (chúng có bậc bao nhiêu?, hệ số cao nhất?,...) và rồi chứng minh nó có những tính chất của đa thức đó, ví dụ như nếu nó không như vậy thì ta có điều gì?
+\end{enumerate}
+\end{remark}
+\begin{theorem}[Khoảng của nghiệm phức]
+Cho đa thức $P(x)=a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0$. Khi đó nếu $x_0$ là một nghiệm của $P$ thì 
+$$|x_0|<1+\max_{0 \leq i\leq n-1}  \left|\dfrac{a_i}{a_n}\right|$$
+\end{theorem}
+\begin{theorem}[Đa thức nghiệm thực]
+$n\in \mathbb{Z}^+, \geq 2$ và $P(x)=a_nx^n+...+a_1x+a_0 \in \mathbb{R}[x]$. Nếu $P$ có $n$ nghiệm thực thì $$a_{n-1}^2\geq 2a_n a_{n-2}$$
+\end{theorem}
+\begin{theorem}[Giá trị tại điểm nguyên của đa thức hệ số nguyên]
+Cho $P(x)\in \mathbb{Z}[x], degP \neq 1$. Khi đó với mỗi bộ $(A,B,C)\in (\mathbb{Z}^+)^3$ thì $\exists y\in \mathbb{Z}: |y|>C$ và đoạn $[y-A,y+B]\cap P(\mathbb{Z})=\emptyset$
+
+\end{theorem}
+\begin{theorem}[Bổ đề bậc $>1$ về cấp số cộng]
+$P(x)\in \mathbb{Z}[x], degP\geq 1$. Khi đó tồn tại cấp số cộng vô hạn tăng không có số hạng nào có dạng $P(k), k\in \mathbb{Z}$
+\end{theorem}
+\begin{proof}
+Phản chứng, dùng tính chất của hàm có bậc lớn hơn $1$
+\end{proof}
+\begin{theorem}[gcd đa thức]
+Với $a,b\in \mathbb{Q}[x]$, tồn tại $m,n\in \mathbb{Q}[x]$ sao cho $$(a(x),b(x))=a(x)m(x)+b(x)n(x)$$ 
+\end{theorem}
+\begin{theorem}[Bổ đề Gauss]
+Với $f(x),g(x)\in \mathbb{Z}[x], \neq 0$ thì $$cont(fg)=cont(f)cont(g)$$
+\end{theorem}
+\begin{proof}
+Xét đa thức trên trường $Z_p$, nguyên lý cực hạn
+\end{proof}
+\begin{theorem}[Định lí cơ bản của số học đa thức]
+  $f\in \mathbb{Q}[x]\neq 0$ thì tồn tại $p_i \in \mathbb{Q}[x]$ bất khả quy trên $\mathbb{N}$ đôi một nguyên tố cùng nhau và $k_i\in \mathbb{N}$ để $$f=c.{p_1}^{k_1} \cdots {p_r}^{k_r}$$
+\end{theorem}
+\begin{theorem}
+$f\in \mathbb{Z}[x]$ khác hằng. Khi đó $f$ bất khả quy trên $\mathbb{Q}$ khi và chỉ khi $f$ bất khả quy trên $\mathbb{Z}$
+\end{theorem}
+\begin{theorem}
+$f(x)=a_nx^n+...+a_1x+p \in \mathbb{Z}[x]$ với $p\in \mathbb{P}$, $p>|a_n|+...+|a_1|$ thì $f$ bất khả quy trên $\mathbb{Q}$
+\end{theorem}
+\begin{theorem}
+$P(x)\in \mathbb{Z}[x]$ khác hằng, khi đó tồn tại $a\in \mathbb{Z}^+$ sao cho $P(x)$ và $P(x+a)$ là hai đa thức nguyên tố cùng nhau
+\end{theorem}
+\begin{proof}
+Chứng minh bằng nghiệm của đa thức
+\end{proof}
+\begin{theorem}[ĐỊnh lí nghiệm hữu tỉ]
+$f(T)=a_nT^n+...+a_0 \in \mathbb{Z}[x]$. Giả sư đa thức $f(T)$ có nghiệm hữu tỉ $\dfrac{p}{q}$ với $(p,q)=1$. Khi đó $p|a_0, q|a_n$
+\end{theorem}
+\begin{theorem}[Bổ đề lạ]
+$Q(x)=a_nx^n+...+a_0$ với $0<a_n<a_{n-1}<...<a_0$. Khi đó các nghiệm $z$ của đa thức $Q(x)$ đều thỏa mãn $|z|>1$
+\end{theorem}
+\begin{proof}
+Rõ ràng $1$ không là nghiệm của $Q(x)$. Xét đa thức $$(x-1)Q(x)=a_nx^{n+1}+(a_{n-1}-a_n)x^n+...+(a_0-a_1)x-a_0$$
+Giả sử $r\neq 1$ là nghiệm của $Q(x)$ mà $|r|\leq 1$. Khi đó
+\end{proof}
+\end{document}
